@@ -9,7 +9,7 @@ contract Box is Ownable {
 
     event NumberChanged(uint256 number);
 
-    constructor() Ownable(msg.sender) {}
+    constructor(address owner) Ownable(owner) {}
 
     function store(uint256 newNumber) public onlyOwner {
         s_number = newNumber;
